@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class main {
 
     public static void main(String args[]) {
@@ -10,6 +12,23 @@ public class main {
 
         //Setting the target as a double, so it can be changed easily later
         double target = 1;
+
+        //Ask user for amounts of each type
+        System.out.println("How many pennies?");
+        Scanner scanner = new Scanner(System.in);
+        int pennyNumber = scanner.nextInt();
+
+        System.out.println("How many nickles?");
+        int nickleNumber = scanner.nextInt();
+
+        System.out.println("How many dimes?");
+        int dimeNumber = scanner.nextInt();
+
+        System.out.println("How many quarters?");
+        int quarterNumber = scanner.nextInt();
+
+        //Close scanner
+        scanner.close();
     }
 
 }
