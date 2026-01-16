@@ -19,7 +19,7 @@ public class main {
         int pennyNumber = scanner.nextInt();
 
         System.out.println("How many nickles?");
-        int nickleNumber = scanner.nextInt();
+        int nickelNumber = scanner.nextInt();
 
         System.out.println("How many dimes?");
         int dimeNumber = scanner.nextInt();
@@ -29,6 +29,19 @@ public class main {
 
         //Close scanner
         scanner.close();
+
+        //Calculate total value of all coins
+        double coinValueSum = pennyNumber * penny + nickelNumber * nickel + dimeNumber * dime + quarterNumber * quarter;
+        double valueDifference = coinValueSum - target;
+
+        //Respond to user
+        if(coinValueSum == target) {
+            System.out.println("You win!");
+        } else if (coinValueSum > target) {
+            System.out.println("You were " + valueDifference + " too high!");
+        } else {
+            System.out.println("You were " + valueDifference * -1 + " too low!");
+        }
     }
 
 }
